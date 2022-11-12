@@ -35,6 +35,7 @@
    <addaction name="actionRedo"/>
    <addaction name="actionRozmiar"/>
    <addaction name="actionKolor"/>
+   <addaction name="actionGumka"/>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -51,7 +52,6 @@
     </property>
     <addaction name="actionNew"/>
     <addaction name="actionOpen"/>
-    <addaction name="actionLoad"/>
     <addaction name="actionSave"/>
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
@@ -200,13 +200,12 @@
    </property>
   </action>
   <action name="actionGumka">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/eraser.png</normaloff>:/new/prefix1/eraser.png</iconset>
+   </property>
    <property name="text">
     <string>Gumka</string>
-   </property>
-  </action>
-  <action name="actionLoad">
-   <property name="text">
-    <string>Load</string>
    </property>
   </action>
  </widget>

@@ -120,23 +120,29 @@ void MainWindow::on_actionSave_triggered()
 
 
 void MainWindow::on_actionLoad_triggered()
-{ QPainter painter(this);
-    QString filename = QFileDialog::getOpenFileName(this,tr("Choose"),"",tr("Images (*.png *.jpg *.jpeg"));
-    if(QString::compare(filename,QString())!= 0)
-    {
-        QImage image;
-                bool valid = image.load(filename);
-        if(valid)
-      //  ui->painter->setPixmap(QPixmap::fromImage(image));
-        painter.fillRect(mImage->rect(),QPixmap::fromImage(image));
-        painter.drawImage(0, 0, *mImage);
-
-}
+{
 }
 
 
 void MainWindow::on_actionUndo_triggered()
 {
 
+}
+
+
+void MainWindow::on_actionOpen_triggered()
+{
+    QPainter painter(this);
+        QString filename = QFileDialog::getOpenFileName(this,tr("Choose"),"",tr("Images (*.png *.jpg *.jpeg"));
+        if(QString::compare(filename,QString())!= 0)
+        {
+            QImage image;
+                    bool valid = image.load(filename);
+            if(valid)
+          //  ui->painter->setPixmap(QPixmap::fromImage(image));
+            painter.fillRect(mImage->rect(),QPixmap::fromImage(image));
+            painter.drawImage(0, 0, *mImage);
+
+    }
 }
 

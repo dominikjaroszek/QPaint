@@ -32,6 +32,8 @@ private slots:
 
     void on_actionUndo_triggered();
 
+    void on_actionOpen_triggered();
+
 protected:
     void paintEvent(QPaintEvent *e) override;
     void mousePressEvent(QMouseEvent *e) override;
