@@ -26,7 +26,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 QMAKE_CXXFLAGS += -std=gnu++14
 
 QT += widgets
-
+QT += printsupport
 
 RESOURCES += \
     res.qrc

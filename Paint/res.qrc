@@ -12,5 +12,11 @@
         <file>color-circle.png</file>
         <file>info.png</file>
         <file>eraser.png</file>
+        <file>pen.png</file>
+        <file>printer.png</file>
+        <file>qt.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>printer.png</file>
     </qresource>
 </RCC>

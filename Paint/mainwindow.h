@@ -18,6 +18,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+   bool openImage(const QString &fileName);
+ bool isModified() const { return modified; }
 private slots:
     void on_actionQuit_triggered();
     void on_actionRozmiar_triggered();
@@ -26,13 +28,22 @@ private slots:
 
     void on_actionGumka_triggered();
 
-    void on_actionSave_triggered();
-
-    void on_actionLoad_triggered();
+    bool on_actionSave_triggered();
 
     void on_actionUndo_triggered();
 
     void on_actionOpen_triggered();
+
+    void on_actionPen_triggered();
+
+    void on_actionPrint_triggered();
+
+    void on_actionNew_triggered();
+
+    void on_actionAbout_At_triggered();
+
+    void on_actionAbout_Qt_triggered();
+
 
 protected:
     void paintEvent(QPaintEvent *e) override;
@@ -41,6 +52,9 @@ protected:
     void mouseReleaseEvent(QMouseEvent *e) override;
 
 private:
+    void resizeImage(QImage *image, const QSize &newSize);
+ QImage image;
+ bool modified;
     Ui::MainWindow *ui;
     QPainter *mPainter;
     QImage *mImage;
@@ -49,7 +63,10 @@ private:
     bool mEnabled;
     int mSize;
     QColor mColor;
+     QColor mColor2;
     void saveToFile();
     void loadFromFile();
+    bool maybeSave();
+
 };
 #endif // MAINWINDOW_H

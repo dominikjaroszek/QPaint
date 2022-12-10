@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>841</width>
     <height>600</height>
    </rect>
   </property>
@@ -28,21 +28,19 @@
    <addaction name="actionNew"/>
    <addaction name="actionOpen"/>
    <addaction name="actionSave"/>
-   <addaction name="actionQuit"/>
-   <addaction name="actionCopy"/>
-   <addaction name="actionPaste"/>
-   <addaction name="actionUndo"/>
-   <addaction name="actionRedo"/>
+   <addaction name="actionPrint"/>
    <addaction name="actionRozmiar"/>
    <addaction name="actionKolor"/>
    <addaction name="actionGumka"/>
+   <addaction name="actionPen"/>
+   <addaction name="actionQuit"/>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>841</width>
      <height>21</height>
     </rect>
    </property>
@@ -53,24 +51,16 @@
     <addaction name="actionNew"/>
     <addaction name="actionOpen"/>
     <addaction name="actionSave"/>
+    <addaction name="actionPrint"/>
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
-   </widget>
-   <widget class="QMenu" name="menuEdit">
-    <property name="title">
-     <string>Edit</string>
-    </property>
-    <addaction name="actionCopy"/>
-    <addaction name="separator"/>
-    <addaction name="actionPaste"/>
-    <addaction name="actionUndo"/>
-    <addaction name="actionRedo"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
      <string>About</string>
     </property>
     <addaction name="actionAbout_At"/>
+    <addaction name="actionAbout_Qt"/>
    </widget>
    <widget class="QMenu" name="menuRysowanie">
     <property name="title">
@@ -79,9 +69,9 @@
     <addaction name="actionRozmiar"/>
     <addaction name="actionKolor"/>
     <addaction name="actionGumka"/>
+    <addaction name="actionPen"/>
    </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuEdit"/>
    <addaction name="menuRysowanie"/>
    <addaction name="menuAbout"/>
   </widget>
@@ -130,48 +120,6 @@
     <string>Ctrl+N</string>
    </property>
   </action>
-  <action name="actionCopy">
-   <property name="icon">
-    <iconset resource="res.qrc">
-     <normaloff>:/new/prefix1/copy.png</normaloff>:/new/prefix1/copy.png</iconset>
-   </property>
-   <property name="text">
-    <string>Copy</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+C</string>
-   </property>
-  </action>
-  <action name="actionPaste">
-   <property name="icon">
-    <iconset resource="res.qrc">
-     <normaloff>:/new/prefix1/paste.png</normaloff>:/new/prefix1/paste.png</iconset>
-   </property>
-   <property name="text">
-    <string>Paste</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+V</string>
-   </property>
-  </action>
-  <action name="actionUndo">
-   <property name="icon">
-    <iconset resource="res.qrc">
-     <normaloff>:/new/prefix1/undo.png</normaloff>:/new/prefix1/undo.png</iconset>
-   </property>
-   <property name="text">
-    <string>Undo</string>
-   </property>
-  </action>
-  <action name="actionRedo">
-   <property name="icon">
-    <iconset resource="res.qrc">
-     <normaloff>:/new/prefix1/redo.png</normaloff>:/new/prefix1/redo.png</iconset>
-   </property>
-   <property name="text">
-    <string>Redo</string>
-   </property>
-  </action>
   <action name="actionAbout_At">
    <property name="icon">
     <iconset resource="res.qrc">
@@ -205,7 +153,34 @@
      <normaloff>:/new/prefix1/eraser.png</normaloff>:/new/prefix1/eraser.png</iconset>
    </property>
    <property name="text">
-    <string>Gumka</string>
+    <string>Rubber</string>
+   </property>
+  </action>
+  <action name="actionPen">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/pen.png</normaloff>:/new/prefix1/pen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pen</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/printer.png</normaloff>:/new/prefix1/printer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/qt.png</normaloff>:/new/prefix1/qt.png</iconset>
+   </property>
+   <property name="text">
+    <string>About Qt</string>
    </property>
   </action>
  </widget>
