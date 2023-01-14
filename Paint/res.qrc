@@ -15,6 +15,14 @@
         <file>pen.png</file>
         <file>printer.png</file>
         <file>qt.png</file>
+        <file>brushset.png</file>
+        <file>triangle.png</file>
+        <file>ellipse.png</file>
+        <file>rectangle.png</file>
+        <file>square.png</file>
+        <file>diagonal-line.png</file>
+        <file>shapes.png</file>
+        <file>icons8-eraser-32.png</file>
     </qresource>
     <qresource prefix="/">
         <file>printer.png</file>

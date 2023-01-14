@@ -22,6 +22,7 @@ public:
  bool isModified() const { return modified; }
 private slots:
     void on_actionQuit_triggered();
+
     void on_actionRozmiar_triggered();
 
     void on_actionKolor_triggered();
@@ -29,10 +30,6 @@ private slots:
     void on_actionGumka_triggered();
 
     bool on_actionSave_triggered();
-
-    void on_actionUndo_triggered();
-
-    void on_actionOpen_triggered();
 
     void on_actionPen_triggered();
 
@@ -44,29 +41,52 @@ private slots:
 
     void on_actionAbout_Qt_triggered();
 
+    void on_actionelipsa_triggered();
+
+    void on_actionprostokat_triggered();
+
+    void on_actionkwadrat_triggered();
+
+    void on_actiontrojkat_triggered();
+
+    void on_actionOpen_triggered();
+
+    void on_actionLinia_triggered();
+
+    void on_actionwypelnienie_figury_triggered();
 
 protected:
     void paintEvent(QPaintEvent *e) override;
     void mousePressEvent(QMouseEvent *e) override;
     void mouseMoveEvent(QMouseEvent *e) override;
     void mouseReleaseEvent(QMouseEvent *e) override;
+     void closeEvent(QCloseEvent *event) override;
 
 private:
     void resizeImage(QImage *image, const QSize &newSize);
- QImage image;
- bool modified;
+    QImage image;
+    bool modified;
+    void drawLineTo(const QPoint &mEnd);
     Ui::MainWindow *ui;
     QPainter *mPainter;
-    QImage *mImage;
+    QImage mImage;
     QPoint mBegin;
-    QPoint mEnd;
     bool mEnabled;
     int mSize;
     QColor mColor;
      QColor mColor2;
+     QColor mColorBrush;
     void saveToFile();
     void loadFromFile();
     bool maybeSave();
-
+    bool scribbling;
+    bool ifco1;
+    bool ifco2;
+    bool ifco3;
+    bool ifco4;
+    bool ifco5;
+    bool ifco6;
+    Qt::PenCapStyle style;
+    QImage mtmpImage;
 };
 #endif // MAINWINDOW_H

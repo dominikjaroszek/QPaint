@@ -10,14 +10,35 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="accessibleName">
+   <string/>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget"/>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
    <property name="windowTitle">
     <string>toolBar</string>
+   </property>
+   <property name="accessibleName">
+    <string/>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -29,10 +50,18 @@
    <addaction name="actionOpen"/>
    <addaction name="actionSave"/>
    <addaction name="actionPrint"/>
+   <addaction name="separator"/>
+   <addaction name="actionPen"/>
    <addaction name="actionRozmiar"/>
    <addaction name="actionKolor"/>
    <addaction name="actionGumka"/>
-   <addaction name="actionPen"/>
+   <addaction name="separator"/>
+   <addaction name="actionLinia"/>
+   <addaction name="actionkwadrat"/>
+   <addaction name="actionprostokat"/>
+   <addaction name="actionelipsa"/>
+   <addaction name="actiontrojkat"/>
+   <addaction name="separator"/>
    <addaction name="actionQuit"/>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -66,10 +95,23 @@
     <property name="title">
      <string>Draw</string>
     </property>
+    <widget class="QMenu" name="menuShapes">
+     <property name="title">
+      <string>Shapes</string>
+     </property>
+     <addaction name="actionLinia"/>
+     <addaction name="actionkwadrat"/>
+     <addaction name="actiontrojkat"/>
+     <addaction name="actionprostokat"/>
+     <addaction name="actionelipsa"/>
+    </widget>
+    <addaction name="actionPen"/>
     <addaction name="actionRozmiar"/>
     <addaction name="actionKolor"/>
     <addaction name="actionGumka"/>
-    <addaction name="actionPen"/>
+    <addaction name="separator"/>
+    <addaction name="menuShapes"/>
+    <addaction name="actionwypelnienie_figury"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuRysowanie"/>
@@ -158,6 +200,15 @@
    <property name="text">
     <string>Rubber</string>
    </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
   </action>
   <action name="actionPen">
    <property name="icon">
@@ -166,6 +217,9 @@
    </property>
    <property name="text">
     <string>Pen</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
    </property>
   </action>
   <action name="actionPrint">
@@ -187,6 +241,60 @@
    </property>
    <property name="text">
     <string>About Qt</string>
+   </property>
+  </action>
+  <action name="actionelipsa">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/ellipse.png</normaloff>:/new/prefix1/ellipse.png</iconset>
+   </property>
+   <property name="text">
+    <string>ellipse</string>
+   </property>
+  </action>
+  <action name="actionkwadrat">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/square.png</normaloff>:/new/prefix1/square.png</iconset>
+   </property>
+   <property name="text">
+    <string>square</string>
+   </property>
+  </action>
+  <action name="actionprostokat">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/rectangle.png</normaloff>:/new/prefix1/rectangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>rectangle</string>
+   </property>
+  </action>
+  <action name="actiontrojkat">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/triangle.png</normaloff>:/new/prefix1/triangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>triangle</string>
+   </property>
+  </action>
+  <action name="actionLinia">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/diagonal-line.png</normaloff>:/new/prefix1/diagonal-line.png</iconset>
+   </property>
+   <property name="text">
+    <string>Line</string>
+   </property>
+  </action>
+  <action name="actionwypelnienie_figury">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/prefix1/shapes.png</normaloff>:/new/prefix1/shapes.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fill shapes</string>
    </property>
   </action>
  </widget>
